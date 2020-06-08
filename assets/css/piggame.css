@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+main {
+  background-image: url('../images/NhQnaDS.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  transition: background-image 2s ease-out;
+}
+
+.wrapper {
+  width: 60%;
+  position: absolute;
+  /* top: 20%; */
+  left: 50%;
+  -webkit-box-shadow: -1px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 16px 0px rgba(3, 0, 0, 0.75);
+  transform: translate(-50%, 20%);
+  background-color: #fff;
+  overflow: hidden;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* ================================positioning the players boxes =============== */
+.player1-box {
+  width: 50%;
+  height: 100%;
+  padding: 2%;
+  background-color: #f0f3f578;
+}
+
+.player0-box {
+  width: 50%;
+  height: 100%;
+  padding: 2%;
+}
+
+/* =================================the players================== */
+.players-name {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: rgba(3, 0, 7, 0.746);
+  position: relative;
+  top: 15%;
+}
+
+.players-score {
+  text-align: center;
+  font-size: 100px;
+  letter-spacing: 5px;
+  position: relative;
+  top: 18%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.active {
+  background-color: #928f8f73;
+}
+
+.active .players-name {
+  font-weight: 600;
+  color:  rgba(133, 5, 138, 0.986);
+}
+
+.active .players-name::after {
+  content: '\2022';
+  font-size: 47px;
+  position: absolute; 
+  color: #eb4d4d;
+  top: -12px;
+  right: 20px;
+}
+
+.players-currentBox {
+  background-color: rgba(235, 6, 243, 0.986);
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 40%;
+  /* transform: translate(110%, 10%); */
+  text-align: center;
+  border-radius: 5%;
+  padding-top: 5px;
+  color: white;
+  height: 13vh;
+}
+
+.players-currentLabel {
+  text-transform: uppercase;
+  margin-top: 5px;
+  color: #070000;
+  font-weight: 700 !important;
+}
+
+.players-currentScore {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+button {
+  position: absolute;
+  transform: translateX(-10%);
+  width: 140px;
+  left: 41.5%;
+  color: #130101;
+  background: none;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 2s ease-out;
+  outline: none;
+}
+
+button:hover {
+  font-weight: 700;
+}
+
+/* for fontawesome */
+/* button:hover  {
+  margin-right: 10px;
+} */
+
+button:focus {
+  outline: none;
+  background-color: rgb(200, 29, 223);
+}
+
+/* i {
+     color: purple;
+     display: inline-block;
+     margin-right: 15px;
+     font-size: 32px;
+     line-height: 200%;
+     vertical-align: text-top;
+     margin-top: -4px;
+     left: 20px;
+ } */
+
+button.btn-new {
+  top: 45px;
+}
+
+button.btn-roll {
+  top: 305px;
+}
+
+button.btn-hold {
+  top: 350px;
+}
+
+.dice {
+  position: absolute;
+  left: 43%;
+  width: 100px;
+  top: 150px;
+}
+
+.winner {
+  background-color: rgba(235, 77, 77, 0.26);
+}
+
+.winner.players-name {
+  font-weight: 200;
+  color: purple;
+}
+
+/* to manuplate the dom and set dice img to none */
+.hidedice{
+    display: none;
+}
