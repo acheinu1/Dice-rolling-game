@@ -1,7 +1,7 @@
-const score = [0,0];
+let score = [0,0];
 
-const roundScore = 0;
-const activePlayer = 1;
+let roundScore = 0;
+let activePlayer = 0;
 
 
 // es 5 pattern
@@ -15,6 +15,10 @@ const activePlayer = 1;
 // any of this 2 methods would work
 
 document.querySelector(`.dice`).style.display = `none`;
+document.getElementById(`score-0`).innerHTML = 0;
+document.getElementById(`score-1`).innerHTML = 0;
+document.getElementById(`current0`).innerHTML = 0;
+document.getElementById(`current1`).innerHTML = 0;
 //.className="hidedice";
 
 //target the roll btn from html class
@@ -27,10 +31,20 @@ function rollF (){
   //1 display random number
   let dice = Math.floor(Math.random() * 6) + 1;  
 
-  // to display dice
+  //2 to display dice
   let diceDOM = document.querySelector(".dice")
   diceDOM.style.display = "block";
-  diceDOM.src = `assets/images/dice${dice}.png`
+  diceDOM.src = `assets/images/dice${dice}.png`;
+  
+  //3 update the round score as long as dice is not 1
+    if(dice !== 1){
+        //add dice value to the roundScore
+        // roundScore = roundScore + dice; 
+        roundScore += dice;
+
+        //setting the innerhtml of current box to roundScore
+        document.getElementById(`current${activePlayer}`).innerHTML = roundScore;
+    }
 }
    
 
