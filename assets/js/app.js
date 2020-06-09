@@ -12,26 +12,27 @@ const activePlayer = 1;
 
 // let currentScore0 = document.getElementById(`current${activePlayer}`);
 // currentScore0.innerHTML = `<em> ${dice} </em>`
-
-
-
 // any of this 2 methods would work
-document.querySelector(".dice").style.display = "none";
+
+document.querySelector(`.dice`).style.display = `none`;
 //.className="hidedice";
 
+//target the roll btn from html class
+let rollBtn = document.querySelector(`.btn-roll`);
 
-let rollBtn = document.querySelector(".btn-roll");
+//addEventListener function to the rollBtn on Click event
+rollBtn.addEventListener(`click`, rollF)
 
-rollBtn.addEventListener("click", Roll)
+function rollF (){
+  //1 display random number
+  let dice = Math.floor(Math.random() * 6) + 1;  
 
-function Roll(){
-    //1 display random number
-    let dice = Math.floor(Math.random() * 6) + 1;
-
-    //2 display the result with dice img 
-     var diceDOM = document.querySelector(".dice")
-    diceDOM.style.display="block";
-
-    //3 update the roundscore if random number is not 1
+  // to display dice
+  let diceDOM = document.querySelector(".dice")
+  diceDOM.style.display = "block";
+  diceDOM.src = `assets/images/dice${dice}.png`
 }
+   
+
+
 

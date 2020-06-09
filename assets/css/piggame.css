@@ -3,8 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-    font-family: sans-serif;
+body {
+  font-family: sans-serif;
 }
 .clearfix::after {
   content: '';
@@ -76,13 +76,13 @@ main {
 
 .active .players-name {
   font-weight: 600;
-  color:  rgba(133, 5, 138, 0.986);
+  color: rgba(133, 5, 138, 0.986);
 }
 
 .active .players-name::after {
   content: '\2022';
   font-size: 47px;
-  position: absolute; 
+  position: absolute;
   color: #eb4d4d;
   top: -12px;
   right: 20px;
@@ -182,6 +182,174 @@ button.btn-hold {
 }
 
 /* to manuplate the dom and set dice img to none */
-.hidedice{
-    display: none;
+.hidedice {
+  display: none;
+}
+
+/* media queries */
+/* @media (min-width: 900px) {
+} */
+
+/* ==================== for tablets screens ============================== */
+@media (min-width: 640px) and (max-width: 1100px) {
+  main {
+    background: url('../images/johannes-plenio-3nvxR54IR-0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+  .wrapper {
+    width: 90%;
+    margin-top: 10%;
+    height: 60vh;
+  }
+  .players-name {
+    font-size: 30px;
+  }
+  .players-currentBox {
+    width: 60%;
+    position: relative;
+    top: 30%;
+    background-color: rgb(3, 100, 3);
+    height: 10vh;
+    font-size: 24px;
+  }
+  button {
+    font-size: 20px;
+    position: absolute;
+    left: 42%;
+    margin-top: 4%;
+  }
+  .players-score {
+    font-size: 90px;
+    position: relative;
+    top: 25%;
+  }
+  .active .players-name::after {
+    content: '\2022';
+    font-size: 50px;
+    top: -13px;
+    right: 10px;
+  }
+
+  button.btn-roll {
+    top: 60%;
+  }
+
+  button.btn-hold {
+    top: 67%;
+  }
+  .dice {
+    left: 40%;
+    width:20%;
+    top: 210px;
+  }
+}
+
+/* ================ for bigger phone screens============================== */
+@media (min-width: 320px) and (max-width: 640px) {
+  main {
+    background: url('../images/johannes-plenio-3nvxR54IR-0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+
+  .players-score {
+    font-size: 80px;
+  }
+  .wrapper {
+    width: 100%;
+    /* height: 90vh; */
+  }
+  .players-name {
+    font-size: 20px;
+  }
+  .players-currentBox {
+    width: 60%;
+    position: relative;
+    top: 25%;
+    background-color: rgb(3, 100, 3);
+  }
+  button {
+    font-size: 14px;
+    position: absolute;
+    left: 35%;
+    background: none;
+    text-align: center;
+  }
+  .active .players-name::after {
+    content: '\2022';
+    font-size: 35px;
+    top: -12px;
+    right: -4px;
+  }
+
+  button.btn-roll {
+    top: 260px;
+  }
+
+  button.btn-hold {
+    top: 290px;
+  }
+  .dice {
+    left: 39%;
+    width: 80px;
+    top: 150px;
+  }
+}
+
+/* ==================for super small phones screens=================== */
+@media (max-width: 320px) {
+  main {
+    background: url('../images/johannes-plenio-3nvxR54IR-0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+  .wrapper {
+    width: 95%;
+    margin-top: -10%;
+  }
+  .players-name {
+    font-size: 18px;
+  }
+  .players-currentBox {
+    width: 60%;
+    position: relative;
+    top: 35%;
+    background-color: rgb(3, 100, 3);
+  }
+  button {
+    font-size: 13px;
+    position: absolute;
+    left: 32%;
+  }
+  .players-score {
+    font-size: 65px;
+    position: relative;
+    top: 25%;
+  }
+  .active .players-name::after {
+    content: '\2022';
+    font-size: 35px;
+    top: -12px;
+    right: -4px;
+  }
+
+  button.btn-roll {
+    top: 260px;
+  }
+
+  button.btn-hold {
+    top: 290px;
+  }
+  .dice {
+    left: 40%;
+    width: 60px;
+    top: 150px;
+  }
 }
