@@ -48,5 +48,20 @@ function rollF (){
 }
    
 
+// ============================== the modal section ==============
+let clickButton = document.getElementById(`clickBtn`);
+let closeIcon = document.querySelector(`.close`)
+let bgModal = document.querySelector(`.bg-modal`)
+
+clickButton.addEventListener(`click`, clickbtnFtn )
+closeIcon.addEventListener(`click`, closeiconFtn )
+
+function clickbtnFtn(){
+  bgModal.style.display = `flex`
+}
+
+function closeiconFtn(){
+  bgModal.style.display = `none`
+}
 
 
